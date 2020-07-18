@@ -29,6 +29,11 @@ and select the branch you are interested in and select the checkout option.See I
 
 <img src="art/checkout_branch_ide.png"/>
 
+5. Also each step contains a ```TODO``` which you can follow.To see all available todos for the current
+step you are in check for the TODO tab at the bottom of the IDE.
+
+<img src="art/todo_tab.jpeg"/>
+
 <img src="https://media.giphy.com/media/l0DAHAQ3Ex4XbL1ni/giphy.gif"/>
 
 ## Slides To Session
