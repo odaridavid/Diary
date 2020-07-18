@@ -15,15 +15,40 @@
  */
 package com.github.odaridavid.diary;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.util.Date;
 import java.util.Objects;
 
 //TODO 2. Create model class for Diary containing diary information
+//TODO 3. Convert model class to room entity
+
+/**
+ * The {@link Entity} annotation represents a table that will be created in the database and the class fields
+ * will map to a column in the table.
+ * <p>
+ * So in this case we will have  a table called diary and columns for title,content,timestamp and id.
+ * <p>
+ * Sample:
+ * <code>
+ * Table Name :diary(Class name in lowercase if name not defined in Entity annotation)
+ * <p>
+ * |    title      |   content   |           timestamp                   | id  |
+ * |  something    | something   |     Sat Jul 18 14:10:01 UTC 2020      |  1  |
+ * </code>
+ * <p>
+ * To have a unique key for each record ,the @see {@link PrimaryKey} annotation is used on the field
+ * that needs to be unique,in this case we will use the id.
+ * Room can autogenerate the value for you whenever a new record is added as shown in this class.
+ */
+@Entity
 final class Diary {
 
     private String title;
     private String content;
     private String timestamp;
+    @PrimaryKey(autoGenerate = true)
     private int id;
 
     //Default Constructor
