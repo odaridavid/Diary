@@ -16,13 +16,14 @@
 package com.github.odaridavid.diary;
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.util.Date;
 import java.util.Objects;
 
-//TODO 2. Create model class for Diary containing diary information
-//TODO 3. Convert model class to room entity
+//TODO 2. Create model class for event containing event information
+//TODO 3. Convert event model class to room entity
 
 /**
  * The {@link Entity} annotation represents a table that will be created in the database and the
@@ -40,6 +41,7 @@ import java.util.Objects;
  * <p>
  * To have a unique key for each record ,the @see {@link PrimaryKey} annotation is used on the field
  * that needs to be unique,in this case we will use the id.
+ * <p>
  * Room can autogenerate the value for you whenever a new record is added as shown in this class.
  */
 @Entity
@@ -51,19 +53,18 @@ final class Event {
     @PrimaryKey(autoGenerate = true)
     private int id;
 
-    //Default Constructor
+    //Tells room to ignore whatever field or constructor that you dont need it to use.
+    @Ignore
     Event() {
         this.title = null;
         this.content = null;
         this.timestamp = new Date().toString();
-        this.id = -1;
     }
 
-    Event(String title, String content, String timestamp, int id) {
+    Event(String title, String content, String timestamp) {
         this.title = title;
         this.content = content;
         this.timestamp = timestamp;
-        this.id = id;
     }
 
     public void setTitle(String title) {
