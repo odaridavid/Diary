@@ -18,8 +18,8 @@ package com.github.odaridavid.diary;
 import java.util.Date;
 import java.util.Objects;
 
-//TODO 2. Create model class for Diary containing diary information
-final class Diary {
+//TODO 2. Create model class for an Event containing the event information
+final class Event {
 
     private String title;
     private String content;
@@ -27,14 +27,14 @@ final class Diary {
     private int id;
 
     //Default Constructor
-    Diary() {
+    Event() {
         this.title = null;
         this.content = null;
         this.timestamp = new Date().toString();
         this.id = -1;
     }
 
-    Diary(String title, String content, String timestamp, int id) {
+    Event(String title, String content, String timestamp, int id) {
         this.title = title;
         this.content = content;
         this.timestamp = timestamp;
@@ -75,7 +75,7 @@ final class Diary {
 
     @Override
     public String toString() {
-        return "Diary{" +
+        return "Event{" +
                 "title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", timestamp='" + timestamp + '\'' +
@@ -90,12 +90,12 @@ final class Diary {
 
         if (that == null || getClass() != that.getClass()) return false;
 
-        Diary thatDiary = (Diary) that;
+        Event vThatEvent = (Event) that;
 
-        return this.getId() == thatDiary.getId() &&
-                this.getTitle().equals(thatDiary.getTitle()) &&
-                Objects.equals(this.getContent(), thatDiary.getContent()) &&
-                this.getTimestamp().equals(thatDiary.getTimestamp());
+        return this.getId() == vThatEvent.getId() &&
+                this.getTitle().equals(vThatEvent.getTitle()) &&
+                Objects.equals(this.getContent(), vThatEvent.getContent()) &&
+                this.getTimestamp().equals(vThatEvent.getTimestamp());
     }
 
     @Override
