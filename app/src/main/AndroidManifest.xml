@@ -9,6 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".EditEventActivity"
+            android:label="Edit Event"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EventDetailsActivity"
+            android:label=""
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AddEventActivity"
+            android:label="Add Event"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

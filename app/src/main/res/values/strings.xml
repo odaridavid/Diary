@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Diary</string>
+    <string name="info_no_events_in_diary">No Events In Diary</string>
+    <string name="hint_enter_title">Enter Title</string>
+    <string name="hint_enter_content">Enter Content</string>
+    <string name="hint_save">Save</string>
+    <string name="error_empty_fields">Fill all fields</string>
+    <string name="info_saved">Saved</string>
+    <string name="title_edit">Edit</string>
+    <string name="title_delete">Delete</string>
+    <string name="info_deleted">Deleted</string>
 </resources>
