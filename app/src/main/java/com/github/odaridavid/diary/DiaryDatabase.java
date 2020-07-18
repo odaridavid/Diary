@@ -27,6 +27,9 @@ import androidx.room.RoomDatabase;
  * a version number for the current database version and provides the data access objects.
  * <p>
  * The database class is also an abstract class that has to extend the {@link RoomDatabase} class.
+ *
+ * Note : Any change made to your entities will require a version update so as to migrate the db.
+ * We won't be looking at migrations at this point.
  */
 @Database(entities = {Event.class}, version = 1)
 abstract class DiaryDatabase extends RoomDatabase {
