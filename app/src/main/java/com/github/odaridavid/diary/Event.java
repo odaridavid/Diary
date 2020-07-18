@@ -25,14 +25,14 @@ import java.util.Objects;
 //TODO 3. Convert model class to room entity
 
 /**
- * The {@link Entity} annotation represents a table that will be created in the database and the class fields
- * will map to a column in the table.
+ * The {@link Entity} annotation represents a table that will be created in the database and the
+ * class fields will map to a column in the table.
  * <p>
- * So in this case we will have  a table called diary and columns for title,content,timestamp and id.
+ * So in this case we will have a table called event and columns for title,content,timestamp and id.
  * <p>
  * Sample:
  * <code>
- * Table Name :diary(Class name in lowercase if name not defined in Entity annotation)
+ * Table Name :event(Class name in lowercase if name not defined in Entity annotation)
  * <p>
  * |    title      |   content   |           timestamp                   | id  |
  * |  something    | something   |     Sat Jul 18 14:10:01 UTC 2020      |  1  |
@@ -43,7 +43,7 @@ import java.util.Objects;
  * Room can autogenerate the value for you whenever a new record is added as shown in this class.
  */
 @Entity
-final class Diary {
+final class Event {
 
     private String title;
     private String content;
@@ -52,14 +52,14 @@ final class Diary {
     private int id;
 
     //Default Constructor
-    Diary() {
+    Event() {
         this.title = null;
         this.content = null;
         this.timestamp = new Date().toString();
         this.id = -1;
     }
 
-    Diary(String title, String content, String timestamp, int id) {
+    Event(String title, String content, String timestamp, int id) {
         this.title = title;
         this.content = content;
         this.timestamp = timestamp;
@@ -100,7 +100,7 @@ final class Diary {
 
     @Override
     public String toString() {
-        return "Diary{" +
+        return "Event{" +
                 "title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", timestamp='" + timestamp + '\'' +
@@ -115,12 +115,12 @@ final class Diary {
 
         if (that == null || getClass() != that.getClass()) return false;
 
-        Diary thatDiary = (Diary) that;
+        Event vThatEvent = (Event) that;
 
-        return this.getId() == thatDiary.getId() &&
-                this.getTitle().equals(thatDiary.getTitle()) &&
-                Objects.equals(this.getContent(), thatDiary.getContent()) &&
-                this.getTimestamp().equals(thatDiary.getTimestamp());
+        return this.getId() == vThatEvent.getId() &&
+                this.getTitle().equals(vThatEvent.getTitle()) &&
+                Objects.equals(this.getContent(), vThatEvent.getContent()) &&
+                this.getTimestamp().equals(vThatEvent.getTimestamp());
     }
 
     @Override
