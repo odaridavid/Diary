@@ -16,6 +16,7 @@
 package com.github.odaridavid.diary;
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.util.Date;
@@ -52,19 +53,18 @@ final class Event {
     @PrimaryKey(autoGenerate = true)
     private int id;
 
-    //Default Constructor
+    //Tells room to ignore whatever field or constructor that you dont need it to use.
+    @Ignore
     Event() {
         this.title = null;
         this.content = null;
         this.timestamp = new Date().toString();
-        this.id = -1;
     }
 
-    Event(String title, String content, String timestamp, int id) {
+    Event(String title, String content, String timestamp) {
         this.title = title;
         this.content = content;
         this.timestamp = timestamp;
-        this.id = id;
     }
 
     public void setTitle(String title) {
