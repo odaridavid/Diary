@@ -53,6 +53,7 @@ TODO
 
 ## Screenshots 📱
 
+<img src="art/add.png" width="200"/> <img src="art/details.png" width="200"/> <img src="art/edit.png" width="200"/> <img src="art/main.png" width="200"/> <img src="art/main_full.png" width="200"/>
 
 ## License ⚖️
 
