@@ -7,9 +7,9 @@ SQLite by acting as an [Object Relational Mapper](https://en.wikipedia.org/wiki/
 
 ## Pre-Requisites ✔️
 
-- [] Knowledge on android basics.
-- [] Have Android Studio / IntelliJ.
-- [] Knowledge on git.
+- [ ] Knowledge on android basics.
+- [ ] Have Android Studio / IntelliJ.
+- [ ] Knowledge on git.
 
 ## How to get started 🏁
 
