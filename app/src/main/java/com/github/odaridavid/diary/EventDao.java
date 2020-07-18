@@ -15,6 +15,7 @@
  */
 package com.github.odaridavid.diary;
 
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -29,7 +30,10 @@ import java.util.List;
  * Bringing about the concept of separation of concerns,by encapsulating the queries you'll be using
  * for each request.
  * That also makes testing easier.
+ *
+ * It is annotated with {@link Dao}
  */
+@Dao
 interface EventDao {
 
     /**
