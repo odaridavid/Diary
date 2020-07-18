@@ -5,13 +5,13 @@ This is possible using [Room](https://developer.android.com/topic/libraries/arch
 persistence library and one of the architecture component libraries, it provides an abstraction over
 SQLite by acting as an [Object Relational Mapper](https://en.wikipedia.org/wiki/Object-relational_mapping) ,ORM.
 
-## Pre-Requisites
+## Pre-Requisites ✔️
 
 -[] Knowledge on android basics.
 -[] Have Android Studio / IntelliJ.
 -[] Knowledge on git.
 
-## How to get started
+## How to get started 🏁
 
 This repository contains several branches that build on each step we will take to build out the Dairy 
 app to handle Create,Read,Update and Delete Operations,CRUD.
@@ -25,6 +25,8 @@ To start with the first step/session and subsequent sessions.
 3. If you use the terminal for git perform a ```git checkout ``` to get started.
 4. If you use the IDE for git stuff,on the bottom right click on the git branch name 
 and select the branch you are interested in.
+
+<img src="https://media.giphy.com/media/l0DAHAQ3Ex4XbL1ni/giphy.gif"/>
 
 ## Slides To Session
 
@@ -40,10 +42,10 @@ TODO
 - [Room Library Code Documentation](https://developer.android.com/reference/android/arch/persistence/room/package-summary)
 - [Room Release Notes](https://developer.android.com/jetpack/androidx/releases/room)
 
-## Screenshots 📱📱
+## Screenshots 📱
 
 
-## LICENSE ⚖️
+## License ⚖️
 
 ```
    Copyright 2020 David Odari
@@ -61,8 +63,9 @@ TODO
    limitations under the License.
 ```
 
-## Contacts 📇
+## Contacts 📇📇
 
 Incase of anything feel free to reach me on 
+
 - [Twitter](https://twitter.com/_davidodari)
 - [LinkedIn](https://www.linkedin.com/in/david-odari-155613111/)
