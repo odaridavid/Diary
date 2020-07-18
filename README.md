@@ -7,9 +7,9 @@ SQLite by acting as an [Object Relational Mapper](https://en.wikipedia.org/wiki/
 
 ## Pre-Requisites ✔️
 
-- [] Knowledge on android basics.
-- [] Have Android Studio / IntelliJ.
-- [] Knowledge on git.
+- [ ] Knowledge on android basics.
+- [ ] Have Android Studio / IntelliJ.
+- [ ] Knowledge on git.
 
 ## How to get started 🏁
 
@@ -28,6 +28,11 @@ branches and ```git checkout branch-name``` to the branch of interest to get sta
 and select the branch you are interested in and select the checkout option.See Image below
 
 <img src="art/checkout_branch_ide.png"/>
+
+5. Also each step contains a ```TODO``` which you can follow.To see all available todos for the current
+step you are in check for the TODO tab at the bottom of the IDE.
+
+<img src="art/todo_tab.jpeg"/>
 
 <img src="https://media.giphy.com/media/l0DAHAQ3Ex4XbL1ni/giphy.gif"/>
 
