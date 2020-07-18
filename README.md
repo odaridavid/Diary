@@ -22,9 +22,12 @@ To start with the first step/session and subsequent sessions.
 
 1. Clone the Repository or Fork and Clone from your own repository,whichever you are comfortable with.
 2. Open Existing Project from Android Studio or Intellij and navigate to the cloned project and open it.
-3. If you use the terminal for git perform a ```git checkout ``` to get started.
+3. If you use the terminal for git perform a ```git fetch``` and ```git branch``` to see available 
+branches and ```git checkout branch-name``` to the branch of interest to get started.
 4. If you use the IDE for git stuff,on the bottom right click on the git branch name 
-and select the branch you are interested in.
+and select the branch you are interested in and select the checkout option.See Image below
+
+<img src="art/checkout_branch_ide.png"/>
 
 <img src="https://media.giphy.com/media/l0DAHAQ3Ex4XbL1ni/giphy.gif"/>
 
