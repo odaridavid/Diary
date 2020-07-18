@@ -10,6 +10,7 @@ SQLite by acting as an [Object Relational Mapper](https://en.wikipedia.org/wiki/
 - [ ] Knowledge on android basics.
 - [ ] Have Android Studio / IntelliJ.
 - [ ] Knowledge on git.
+- [ ] Foundational Knowledge on SQL.
 
 ## How to get started 🏁
 
