@@ -6,15 +6,15 @@ import android.os.Bundle;
 
 public final class MainActivity extends AppCompatActivity {
 
+    // For simplicity purposes we will use the Dao in the activity and won't dive into
+    // other architecture components and libraries that abstract this.
+    private EventDao dao;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // For simplicity purposes we will create the database in the activity and won't dive into
-        // other architecture components and libraries such as coroutines,rxjava ,viewmodel and
-        // livedata or any DI framework.
         setContentView(R.layout.activity_main);
-
-        //TODO 7.Create Database Instance
-        DiaryDatabase db = InjectorUtil.provideDiaryDatabase(getApplicationContext());
+        //TODO 8. Get EventDao Instance to have access to db
+        dao = InjectorUtil.provideEventDao(getApplicationContext());
     }
 }
