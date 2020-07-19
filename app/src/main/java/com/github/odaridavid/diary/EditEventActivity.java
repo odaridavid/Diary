@@ -19,7 +19,7 @@ public final class EditEventActivity extends AppCompatActivity {
     private int eventId;
     private EditText editTitleEditText, editContentEditText;
     private ConstraintLayout editEventLayout;
-    private DiaryDatabase db;
+    private EventDao dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +32,14 @@ public final class EditEventActivity extends AppCompatActivity {
 
         eventId = extras.getInt(Keys.EVENT_ID.toString());
 
-        db = InjectorUtil.provideDiaryDatabase(getApplicationContext());
+        dao = InjectorUtil.provideEventDao(getApplicationContext());
 
         editTitleEditText = findViewById(R.id.edit_title_edit_text);
         editContentEditText = findViewById(R.id.edit_content_edit_text);
         editEventLayout = findViewById(R.id.edit_event_layout);
 
         IOExecutor.getInstance().execute(() -> {
-            Event event = db.provideEventDao().getEvent(eventId);
+            Event event = dao.getEvent(eventId);
             runOnUiThread(() -> {
                 editContentEditText.setText(event.getContent());
                 editTitleEditText.setText(event.getTitle());
@@ -66,10 +66,10 @@ public final class EditEventActivity extends AppCompatActivity {
                 Snackbar.make(editEventLayout, R.string.error_empty_fields, Snackbar.LENGTH_SHORT).show();
 
             } else {
-                //TODO 13. Edit Event Details
+                //TODO 17. Edit event details
                 final Event event = new Event(title, content, new Date().toString());
                 event.setId(eventId);
-                IOExecutor.getInstance().execute(() -> db.provideEventDao().updateEvent(event));
+                IOExecutor.getInstance().execute(() -> dao.updateEvent(event));
                 Snackbar.make(editEventLayout, R.string.info_saved, Snackbar.LENGTH_SHORT).show();
                 NavigationUtils.navigateToMainActivity(this);
             }

@@ -32,7 +32,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
-    //TODO 8. Add material design library, for FAB button
+    //TODO 9. Add material design library, for FAB button
     implementation "com.google.android.material:material:1.3.0-alpha01"
 
     //TODO 1. Add Room Dependencies

@@ -22,10 +22,9 @@ import androidx.room.Room;
 //TODO 6. Create Injector Class for Database
 
 /**
- * This provides us with the database dependency,this tries to emulate what a
+ * This provides us with the database and dao dependency,this tries to emulate what a
  * Dependency Injection Pattern or framework would achieve.
  * <p>
- * If you are not familiar with the Dependency Injection Pattern ,links to extra resources are in the readme.
  */
 final class InjectorUtil {
 
@@ -35,7 +34,7 @@ final class InjectorUtil {
     /**
      * Builds an instance of the database for the application.
      */
-    public static DiaryDatabase provideDiaryDatabase(Context context) {
+    private static DiaryDatabase provideDiaryDatabase(Context context) {
         String DIARY_DATABASE_NAME = "diary_db";
         return Room
                 .databaseBuilder(
@@ -44,5 +43,14 @@ final class InjectorUtil {
                         DIARY_DATABASE_NAME
                 )
                 .build();
+    }
+
+    /**
+     *Convenience method for getting an instance of the dao from the activity.
+     */
+    public static EventDao provideEventDao(Context context) {
+        //TODO 7.Create Database Instance
+        DiaryDatabase db = provideDiaryDatabase(context);
+        return db.provideEventDao();
     }
 }

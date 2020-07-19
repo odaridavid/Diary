@@ -7,7 +7,7 @@
     android:animateLayoutChanges="true"
     tools:context=".MainActivity">
 
-    <!--TODO 9 Create MainActivity View-->
+    <!--TODO 10 Create MainActivity View-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/events_recycler_view"

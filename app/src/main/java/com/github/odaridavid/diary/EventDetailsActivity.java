@@ -14,7 +14,7 @@ public final class EventDetailsActivity extends AppCompatActivity {
 
     private int eventId;
     private TextView contentTextView, titleTextView;
-    private DiaryDatabase db;
+    private EventDao dao;
     private Event event;
 
     @Override
@@ -28,14 +28,14 @@ public final class EventDetailsActivity extends AppCompatActivity {
 
         eventId = extras.getInt(Keys.EVENT_ID.toString());
 
-        db = InjectorUtil.provideDiaryDatabase(getApplicationContext());
+        dao = InjectorUtil.provideEventDao(getApplicationContext());
 
         contentTextView = findViewById(R.id.content_text_view);
         titleTextView = findViewById(R.id.title_text_view);
 
-        //TODO 12. Display specific event details
+        //TODO 15. Display specific event details
         IOExecutor.getInstance().execute(() -> {
-            event = db.provideEventDao().getEvent(eventId);
+            event = dao.getEvent(eventId);
             runOnUiThread(() -> {
                 contentTextView.setText(event.getContent());
                 titleTextView.setText(event.getTitle());
@@ -57,9 +57,9 @@ public final class EventDetailsActivity extends AppCompatActivity {
             startActivity(editIntent);
             return true;
         } else if (item.getItemId() == R.id.action_delete) {
-            //TODO 14. Delete Event Details
+            //TODO 16. Delete event details
             IOExecutor.getInstance().execute(() -> {
-                db.provideEventDao().deleteEvent(event);
+                dao.deleteEvent(event);
                 runOnUiThread(() -> {
                     Toast.makeText(getBaseContext(), R.string.info_deleted, Toast.LENGTH_LONG).show();
                     NavigationUtils.navigateToMainActivity(this);

@@ -47,8 +47,8 @@ public final class AddEventActivity extends AppCompatActivity {
             } else {
                 //TODO 11. Save Items
                 final Event event = new Event(title, content, new Date().toString());
-                DiaryDatabase db = InjectorUtil.provideDiaryDatabase(getApplicationContext());
-                IOExecutor.getInstance().execute(() -> db.provideEventDao().insertEvent(event));
+                EventDao dao = InjectorUtil.provideEventDao(getApplicationContext());
+                IOExecutor.getInstance().execute(() -> dao.insertEvent(event));
                 Snackbar.make(addEventLayout, R.string.info_saved, Snackbar.LENGTH_SHORT).show();
                 NavigationUtils.navigateToMainActivity(this);
 
