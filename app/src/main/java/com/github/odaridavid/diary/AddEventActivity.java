@@ -45,7 +45,7 @@ public final class AddEventActivity extends AppCompatActivity {
                 Snackbar.make(addEventLayout, R.string.error_empty_fields, Snackbar.LENGTH_SHORT).show();
 
             } else {
-                //TODO 11. Save Items
+                //TODO 11. Save Event
                 final Event event = new Event(title, content, new Date().toString());
                 EventDao dao = InjectorUtil.provideEventDao(getApplicationContext());
                 IOExecutor.getInstance().execute(() -> dao.insertEvent(event));
