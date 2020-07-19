@@ -14,10 +14,13 @@ SQLite by acting as an [Object Relational Mapper](https://en.wikipedia.org/wiki/
 
 ## How to get started 🏁
 
-This repository contains several branches that build on each step we will take to build out the Dairy 
+This repository contains several branches that build on each step we will take to build out the Diary 
 app to handle Create,Read,Update and Delete Operations,CRUD.
 
-The develop branch which is the main branch will have the starter code.
+The develop branch which is the main branch will have the starter code and the rest of the branches
+are steps towards building a complete app.
+
+<img src="art/branches_gh.png" />
 
 To start with the first step/session and subsequent sessions.
 
@@ -26,14 +29,16 @@ To start with the first step/session and subsequent sessions.
 3. If you use the terminal for git perform a ```git fetch``` and ```git branch``` to see available 
 branches and ```git checkout branch-name``` to the branch of interest to get started.
 4. If you use the IDE for git stuff,on the bottom right click on the git branch name 
-and select the branch you are interested in and select the checkout option.See Image below
+and select the branch you are interested in and select the checkout option.See Images below
 
-<img src="art/checkout_branch_ide.png"/>
+<img src="art/bottom_right_ide.png"/>
+
+<img src="art/ide_branches.png"/>
 
 5. Also each step contains a ```TODO``` which you can follow.To see all available todos for the current
 step you are in check for the TODO tab at the bottom of the IDE.
 
-<img src="art/todo_tab.jpeg"/>
+<img src="art/todo_tab.png"/>
 
 <img src="https://media.giphy.com/media/l0DAHAQ3Ex4XbL1ni/giphy.gif"/>
 
@@ -50,6 +55,7 @@ TODO
 - [Save Data in Local Database Using Room](https://developer.android.com/training/data-storage/room)
 - [Room Library Code Documentation](https://developer.android.com/reference/android/arch/persistence/room/package-summary)
 - [Room Release Notes](https://developer.android.com/jetpack/androidx/releases/room)
+- [Dependency Injection](https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/)
 
 ## Screenshots 📱
 
@@ -73,9 +79,13 @@ TODO
    limitations under the License.
 ```
 
-## Contacts 📇📇
+## Contacts 📇
 
 Incase of anything feel free to reach me on 
 
 - [Twitter](https://twitter.com/_davidodari)
 - [LinkedIn](https://www.linkedin.com/in/david-odari-155613111/)
+
+## Contributing 🤝
+
+Feel free to send in your pull request or file an issue if you notice something that doesn't seem right.
