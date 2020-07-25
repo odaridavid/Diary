@@ -44,9 +44,7 @@ step you are in check for the TODO tab at the bottom of the IDE.
 
 ## Slides To Session
 
-```
-TODO
-```
+[Room ORM | GADS 2020 | Workshop 2](https://speakerdeck.com/davidodari/room-orm-workshop-2-gads-2020)
 
 ## Resources 🏫
 
